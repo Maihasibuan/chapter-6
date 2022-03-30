@@ -1,0 +1,31 @@
+Quiz 2
+
+CREATE TABLE books(
+	id int PRIMARY KEY,
+	name varchar(100) NOT NULL,
+	author varchar(50) NOT null,
+	price int,
+	is_publish boolean 
+);
+INSERT INTO books VALUES(1, 'The Intelligent Investor', 'Benjamin Graham', '175500', 'true');
+INSERT INTO books VALUES(2, 'Segala Galanya Amyar', 'Mark Manson', '111000', 'false');
+INSERT INTO books VALUES(3, 'Rich Dad Poor Dad', 'Robert T.Kiyosaki', '54400', 'false');
+INSERT INTO books VALUES(4, 'Novel Bulan', 'Tere Liye', '76000', 'true');
+INSERT INTO books VALUES(5, 'You Do You', 'Fellexandro Ruby', '102400', 'true');
+INSERT INTO books VALUES(6, 'Start with Why', 'Simon Sinek', '80000', 'false');
+
+select name, author, price from books;
+
+ 
+
+select * from books where price >= 80000;
+ 
+select * from books where name like 'rich%';
+update books set price = '180000', is_publish = 'true' where author = 'Simon Sinek';
+delete from books where name = 'Novel Bulan';
+ 
+
+select * from books order by price asc;
+
+ 
+
